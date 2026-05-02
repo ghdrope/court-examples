@@ -20,7 +20,7 @@ spec:
           sleep 2
           echo "[api] Connecting to database at postgres:5432..."
           sleep 15
-          exit 0
+          exit 1
 
     - name: worker
       image: busybox:1.36

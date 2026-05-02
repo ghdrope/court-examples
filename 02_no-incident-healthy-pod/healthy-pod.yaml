@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world
+  labels:
+    app: hello-world
+  annotations:
+    court.dev/repository: https://github.com/ghdrope/court-examples
+spec:
+  restartPolicy: Never
+  containers:
+    - name: app
+      image: busybox:1.36
+      command:
+        - /bin/sh
+        - -c
+        - |
+          echo "Hello World !"
+          sleep 10
+          
